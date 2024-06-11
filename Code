@@ -1,0 +1,45 @@
+using System; 
+using System.Collections.Generic; 
+using System.Linq; 
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OddOrEven { internal class Program { static void Main(string[] args)
+
+    {   // Message to user before they enter info
+        // Lets them know what to expect using this program
+        Console.WriteLine(@"
+        **** WELCOME TO THE ODD OR EVEN TOOL ****
+        *****************************************
+        Here you'll be asked to put in an integer
+        as a whole number and we'll display if***
+        the value is odd or even!****************
+        ******** LETS GET STARTED! **************");
+
+        // Puts line between message to user and first promt
+        Console.WriteLine(" \n");
+
+        // Prompts user to enter an integer value
+        Console.Write("Enter value here (ex. 1, 2, 5) : \n");
+        // Stores integer value that entered by user 
+        int evenOrOdd = int.Parse(Console.ReadLine());
+
+        // Takes user integer and determines if the value is odd or even.
+        if (evenOrOdd % 2 == 0)
+
+        {   // If user value has no remainders, it's even
+            // Program prints that the integer is even
+            Console.WriteLine("The value of this integer is even! \n");
+
+
+        }
+        else
+        {   // If user value has any remainders, it's odd
+            // Program prints out that the integer is odd
+            Console.WriteLine("The value of this integer is odd! \n");
+        }
+        // Says thank you to user and prompts them to exit
+        Console.WriteLine(" THANK YOU FOR USING THE ODD OR EVEN TOOL! ");
+    }
+}
+}
